@@ -1,0 +1,35 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Figma to Code Project Rules
+
+## Core Principles
+- Follow a modular component architecture
+- Use TypeScript for type safety
+- Implement responsive design with mobile-first approach
+- Follow iOS design guidelines for mobile UI components
+
+## Workflow Guidelines (NON-NEGOTIABLE)
+- Always check PLANNING.md and TASKS.md before starting work
+- Confirm with the user before starting a new task
+- Test each step thoroughly before marking it complete
+- Update TASKS.md after completing each step
+  - Not yet completed tasks remain as "[ ]"
+  - Mark tasks as "✅" when completed
+  - Mark tasks as "[IN PROGRESS]" when actively working on them
+- Never begin a new task without user approval
+
+## Research Requirements (NON-NEGOTIABLE)
+- If less than 85% certain about an implementation, MUST use perplexity MCP to search for documentation
+- MUST use sequential thinking MCP to create step-by-step implementation plans for complex features
+- Document research findings and implementation decisions
+
+## AI Integration
+- Use OpenRouter API with Claude 3.7 Sonnet model
+- API Key: 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
+
+## Project Context
+@file ./PLANNING.md
+@file ./TASKS.md

@@ -1,0 +1,181 @@
+@import "tailwindcss";
+
+@theme {
+  /* Base colors */
+  --color-primary: 29 78 216; /* blue-700 */
+  --color-secondary: 79 70 229; /* indigo-600 */
+  --color-accent: 217 70 239; /* purple-500 */
+  
+  /* Background colors */
+  --color-background: 255 255 255; /* white */
+  --color-foreground: 15 23 42; /* slate-900 */
+  
+  /* UI colors */
+  --color-success: 34 197 94; /* green-500 */
+  --color-error: 239 68 68; /* red-500 */
+  --color-warning: 245 158 11; /* amber-500 */
+  --color-info: 59 130 246; /* blue-500 */
+  
+  /* Neutral colors */
+  --color-gray-50: 249 250 251;
+  --color-gray-100: 243 244 246;
+  --color-gray-200: 229 231 235;
+  --color-gray-300: 209 213 219;
+  --color-gray-400: 156 163 175;
+  --color-gray-500: 107 114 128;
+  --color-gray-600: 75 85 99;
+  --color-gray-700: 55 65 81;
+  --color-gray-800: 31 41 55;
+  --color-gray-900: 17 24 39;
+  --color-gray-950: 3 7 18;
+}
+
+.dark {
+  --color-background: 15 23 42; /* slate-900 */
+  --color-foreground: 255 255 255; /* white */
+}
+
+body {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+/* Container class */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 80rem;
+}
+@media (min-width: 640px) {
+  .container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* iOS-style buttons */
+.ios-button-primary {
+  border-radius: 9999px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background-color: rgb(var(--color-primary));
+  color: white;
+}
+.ios-button-primary:focus {
+  outline: none;
+}
+.ios-button-primary:focus-visible {
+  ring-width: 2px;
+  ring-offset-width: 2px;
+  ring-color: rgb(var(--color-primary) / 0.5);
+}
+.ios-button-primary:hover {
+  background-color: rgb(var(--color-primary) / 0.9);
+}
+
+.ios-button-secondary {
+  border-radius: 9999px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background-color: rgb(var(--color-secondary));
+  color: white;
+}
+.ios-button-secondary:focus {
+  outline: none;
+}
+.ios-button-secondary:focus-visible {
+  ring-width: 2px;
+  ring-offset-width: 2px;
+  ring-color: rgb(var(--color-secondary) / 0.5);
+}
+.ios-button-secondary:hover {
+  background-color: rgb(var(--color-secondary) / 0.9);
+}
+
+.ios-button-outline {
+  border-radius: 9999px;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-weight: 500;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition-property: color, background-color, border-color;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+  background-color: transparent;
+  border: 1px solid rgb(209, 213, 219);
+  color: rgb(var(--color-foreground));
+}
+.ios-button-outline:focus {
+  outline: none;
+}
+.ios-button-outline:focus-visible {
+  ring-width: 2px;
+  ring-offset-width: 2px;
+  ring-color: rgb(209, 213, 219);
+}
+.ios-button-outline:hover {
+  background-color: rgb(249, 250, 251);
+}
+.dark .ios-button-outline:hover {
+  background-color: rgb(31, 41, 55);
+}
+
+/* iOS-style form elements */
+.ios-input {
+  border-radius: 0.5rem;
+  border: 1px solid rgb(209, 213, 219);
+  padding: 0.75rem 1rem;
+  background-color: white;
+  color: rgb(var(--color-foreground));
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+.ios-input:focus {
+  outline: none;
+  ring-width: 2px;
+  ring-color: rgb(var(--color-primary) / 0.5);
+  border-color: transparent;
+}
+.dark .ios-input {
+  border-color: rgb(55, 65, 81);
+  background-color: rgb(31, 41, 55);
+}
+
+.ios-card {
+  border-radius: 0.75rem;
+  border: 1px solid rgb(229, 231, 235);
+  background-color: white;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+.dark .ios-card {
+  border-color: rgb(31, 41, 55);
+  background-color: rgb(31, 41, 55);
+}
+
